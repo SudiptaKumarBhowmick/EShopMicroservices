@@ -8,8 +8,4 @@
     <DockerfileContext>..\..\..\..\eshop-microservices</DockerfileContext>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj" />
-  </ItemGroup>
-
 </Project>
