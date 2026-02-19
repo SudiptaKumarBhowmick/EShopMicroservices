@@ -2,5 +2,8 @@
   <Folder Name="/BuildingBlocks/">
     <Project Path="BuildingBlocks/BuildingBlocks/BuildingBlocks.csproj" Id="063aa7c6-e031-43f4-8693-301712919376" />
   </Folder>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
   <Project Path="Services/Catalog/Catalog.API/Catalog.API.csproj" />
 </Solution>
