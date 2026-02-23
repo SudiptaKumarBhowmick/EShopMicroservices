@@ -9,14 +9,19 @@ services:
       - "5432:5432"
     volumes:
       - postgres_catalog:/var/lib/postgresql/data/
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
   catalog.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=8080
       - ASPNETCORE_HTTPS_PORTS=8081
-      - ConnectionStrings__Database=Server=catalogdb;Port=5432;Database=catalogDB;User Id=postgres;Password=postgres;Include Error Detail=true
+      - ConnectionStrings__DBConnection=Server=catalogdb;Port=5432;Database=catalogDB;User Id=postgres;Password=postgres;Include Error Detail=true
     depends_on:
-      - catalogDB
+      - catalogdb
     ports:
       - "6000:8080"
       - "6060:8081"
