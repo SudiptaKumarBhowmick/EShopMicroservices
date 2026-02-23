@@ -5,5 +5,6 @@
   <Project Path="docker-compose.dcproj">
     <Build />
   </Project>
+  <Project Path="Services/Basket/Basket.API/Basket.API.csproj" Id="df276b92-71d0-4273-be3c-f30a03232235" />
   <Project Path="Services/Catalog/Catalog.API/Catalog.API.csproj" />
 </Solution>
