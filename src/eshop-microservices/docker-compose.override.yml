@@ -5,6 +5,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=catalogDB
+    restart: always
     ports:
       - "5432:5432"
     volumes:
@@ -14,6 +15,19 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+
+  basketdb:
+    container_name: basketdb
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=basketDB
+    restart: always
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_basket:/var/lib/postgresql/data/
+
   catalog.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
