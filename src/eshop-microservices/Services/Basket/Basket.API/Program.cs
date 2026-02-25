@@ -1,3 +1,5 @@
+using BuildingBlocks.Exceptions.Handler;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Before building the application
@@ -20,6 +22,7 @@ builder.Services.AddMarten(opts =>
 }).UseLightweightSessions();
 
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
+builder.Services.AddExceptionHandler<CustomExceptionHandler>();
 
 var app = builder.Build();
 
@@ -28,6 +31,6 @@ var app = builder.Build();
 
 app.MapCarter();
 
-app.MapGet("/", () => "Hello World!");
+app.UseExceptionHandler(options => { });
 
 app.Run();
