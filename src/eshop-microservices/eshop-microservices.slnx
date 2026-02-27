@@ -7,4 +7,5 @@
   </Project>
   <Project Path="Services/Basket/Basket.API/Basket.API.csproj" Id="df276b92-71d0-4273-be3c-f30a03232235" />
   <Project Path="Services/Catalog/Catalog.API/Catalog.API.csproj" />
+  <Project Path="Services/Discount/Discount.gRPC/Discount.gRPC.csproj" Id="a5226c54-682d-4048-8ac6-8542ae33fe08" />
 </Solution>
