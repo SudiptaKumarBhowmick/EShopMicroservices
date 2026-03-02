@@ -8,4 +8,5 @@
   <Project Path="Services/Basket/Basket.API/Basket.API.csproj" Id="df276b92-71d0-4273-be3c-f30a03232235" />
   <Project Path="Services/Catalog/Catalog.API/Catalog.API.csproj" />
   <Project Path="Services/Discount/Discount.gRPC/Discount.gRPC.csproj" Id="a5226c54-682d-4048-8ac6-8542ae33fe08" />
+  <Project Path="Services/Ordering/Ordering.API/Ordering.API.csproj" Id="b2249682-f193-4b3c-a471-4c80b812c429" />
 </Solution>
