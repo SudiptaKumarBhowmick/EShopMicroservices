@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Ordering.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Ordering.Infrastructure
 {
@@ -14,11 +16,11 @@ namespace Ordering.Infrastructure
             //services.AddScoped<ISaveChangesInterceptor, AuditableEntityInterceptor>();
             //services.AddScoped<ISaveChangesInterceptor, DispatchDomainEventsInterceptor>();
 
-            //services.AddDbContext<ApplicationDbContext>((sp, options) =>
-            //{
-            //    options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
-            //    options.UseSqlServer(connectionString);
-            //});
+            services.AddDbContext<ApplicationDbContext>((sp, options) =>
+            {
+                //options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
+                options.UseSqlServer(connectionString);
+            });
 
             //services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
 
