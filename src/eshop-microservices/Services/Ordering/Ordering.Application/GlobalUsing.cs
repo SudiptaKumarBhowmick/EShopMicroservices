@@ -1,0 +1,17 @@
+﻿global using MediatR;
+global using Microsoft.Extensions.Logging;
+global using Ordering.Domain.Events;
+global using BuildingBlocks.Behaviors;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Reflection;
+global using BuildingBlocks.CQRS;
+global using Ordering.Application.Data;
+global using Ordering.Application.Exceptions;
+global using Ordering.Domain.ValueObjects;
+global using FluentValidation;
+global using Microsoft.EntityFrameworkCore;
+global using Ordering.Application.Extensions;
+global using Ordering.Application.DTOs;
+global using Ordering.Domain.Models;
+global using BuildingBlocks.Pagination;
