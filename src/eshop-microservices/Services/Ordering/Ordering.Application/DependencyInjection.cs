@@ -1,4 +1,6 @@
-﻿namespace Ordering.Application
+﻿using BuildingBlocks.Messaging.MassTransit;
+
+namespace Ordering.Application
 {
     public static class DependencyInjection
     {
@@ -13,7 +15,7 @@
             });
 
             //services.AddFeatureManagement();
-            //services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly());
+            services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly());
 
             return services;
         }
