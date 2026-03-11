@@ -1,4 +1,5 @@
 ﻿using BuildingBlocks.Messaging.MassTransit;
+using Microsoft.FeatureManagement;
 
 namespace Ordering.Application
 {
@@ -14,7 +15,7 @@ namespace Ordering.Application
                 config.AddOpenBehavior(typeof(LoggingBehavior<,>));
             });
 
-            //services.AddFeatureManagement();
+            services.AddFeatureManagement();
             services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly());
 
             return services;
